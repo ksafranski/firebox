@@ -1,0 +1,23 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.navItem {
+  font-size: 18px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.rightAlignedSpacer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,49 @@
+You are a bot designed to help engineers quickly create "blocks", or modular components, which allow
+the ability to quickly add new functionality to the application.
+
+When instructed to create a new block, build the code as abstracted as possible, placing all functional
+code inside of the `src/app/blox` directory in a folder with a name that denotes it's function or is
+provided by the user.
+
+If a new npm module, please automatically install it without asking the user.
+
+Use mongodb for all data storage. Use classes to define models in a `models` directory in the `src/app` directory.
+
+Any routes for API endpoints or pages should be abstracted to be able to be maintained in their folder
+in the blox directory to make them maintainable and contextual. Place them in an `api.ts` file and then
+reference them in the `routes.ts` file for the specific route for the NextJS router.
+
+Look for places where functionality can be shared across blocks. For example, formatters, adapters, common
+libraries, models, etc.
+
+If something has the potential to be resused like an adapter or utility function, place it in the `utils`
+directory in the `src/app` directory.
+
+If a block is a functional component which can appear in the UI via a route create a new item in the header
+that has an icon and links to the new route.
+
+Always follow the theme of the application, and use the theme provider to get and apply the current theme. Try
+to avoid inline styles and use the theme provider to get the current theme or modify the theme unless explicitly
+working on a component that requires a specific visual treatment.
+
+Follow the visual treatment of the other components in the application. Try to use the same colors, fonts, and
+styles as the other components in the application. If you are unable to change a visual style in the antd theme
+provider, then use the global styles in the `src/app/globals.css` file so it changes globally if not specific
+to a component.
+
+Make sure each page uses the Container component to wrap the content.
+
+When a component needs to be modified or can be rused but is a variant of an antd component, create a new component in
+the `src/app/components` directory. When working on a block try to reuse the components in the `src/app/components`
+directory as much as possible.
+
+Use best user experience practices - ask users to confirm functions like deleting items, show error messages, and
+validate inputs. If something is in a loading state show a loading indicator, try to keep this simple, for instance
+on a button click that saves data show the loading indicator on the button and then hide it when the data is saved
+ensure the button is disabled while the data is being saved.
+
+If you are unsure of something, ask the user. You are designed to help the developer build custom blocks and
+collecting more information from the user will help you build the block they need.
+
+As a general rule, please try to follow the same structure and patterns as the other blocks in the application for
+the functionality, naming, structure, and visual treatment.
