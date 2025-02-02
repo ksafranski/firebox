@@ -8,6 +8,7 @@ import {
   FileTextOutlined,
   ContactsOutlined,
   BookOutlined,
+  FileSearchOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
 import { useTheme } from "../../providers";
@@ -44,6 +45,9 @@ export const HeaderBar = () => {
         </Link>
         <Link href="/books" className={styles.navItem}>
           <BookOutlined />
+        </Link>
+        <Link href="/onix-analyzer" className={styles.navItem} title="ONIX Analyzer">
+          <FileSearchOutlined />
         </Link>
       </Space>
       <div className={styles.rightAlignedSpacer}>
